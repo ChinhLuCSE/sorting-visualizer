@@ -10,6 +10,34 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* System colors */
+  --color-system-purple10: #240643;
+  --color-system-purple15: #300b60;
+  --color-system-purple20: #401075;
+  --color-system-purple30: #5a1ba9;
+  --color-system-purple40: #7526e3;
+  --color-system-purple50: #9050e9;
+  --color-system-purple60: #ad7bee;
+  --color-system-purple65: #b78def;
+  --color-system-purple70: #c29ef1;
+  --color-system-purple80: #d7bff2;
+  --color-system-purple90: #ece1f9;
+  --color-system-purple95: #f6f2fb;
+
+  --color-system-green10: #071b12;
+  --color-system-green15: #0c2912;
+  --color-system-green20: #1c3326;
+  --color-system-green30: #194e31;
+  --color-system-green40: #396547;
+  --color-system-green50: #2e844a;
+  --color-system-green60: #3ba755;
+  --color-system-green65: #41b658;
+  --color-system-green70: #45c65a;
+  --color-system-green80: #91db8b;
+  --color-system-green90: #cdefc4;
+  --color-system-green95: #ebf7e6;
+  --color-system-green100: #202b23;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +51,27 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+.default-line-color {
+  background-color: theme("colors.system.purple50");
+}
+
+.change-line-color {
+  background-color: theme("colors.system.green60");
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.pulse-animation {
+  animation: pulse 0.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
